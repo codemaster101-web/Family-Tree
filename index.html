@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Family Tree</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌳 My Family Tree</h1>
+
+  <div class="tree">
+    <div class="member" onclick="openDetails('john')">
+      <img src="images/john.jpg" alt="John Smith">
+      <p><b>John Smith</b> <br> 1870–1945</p>
+      <span class="tooltip">Farmer, loved music</span>
+      <span class="audio" onclick="playName('John Smith', event)">🔊</span>
+    </div>
+
+    <div class="member" onclick="openDetails('mary')">
+      <img src="images/mary.jpg" alt="Mary Johnson">
+      <p><b>Mary Johnson</b> <br> 1875–1950</p>
+      <span class="tooltip">Teacher, piano player</span>
+      <span class="audio" onclick="playName('Mary Johnson', event)">🔊</span>
+    </div>
+  </div>
+
+  <!-- Popup for details -->
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeDetails()">&times;</span>
+      <div id="detailsText"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
